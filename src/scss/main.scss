@@ -1,0 +1,199 @@
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: $white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: $navy;
+  z-index: 10;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  h1 {
+    margin: 0;
+    padding: 20px;
+    font-size: 32px;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  background: rgba($pale-gray, .7);
+  font-size: 16px;
+
+  p {
+    padding: 8px;
+    margin: 0;
+  }
+}
+
+.overlay {
+  display: none;
+  background: rgba($navy, 0.7);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s opacity;
+  align-items: center;
+  justify-content: center;
+
+  .active & {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.message-inner {
+  z-index: 101;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  max-width: 700px;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+
+  .active & {
+    //opacity: 1;
+  }
+}
+
+.thumbnail {
+  position: absolute;
+  bottom: -50px;
+  left: -70px;
+  width: 150px;
+  z-index: 102;
+  opacity: 0;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(#000, 0.1);
+}
+
+.message-detail {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  background: $white;
+  border-radius: 10px;
+  border-bottom: 24px $navy solid;
+  opacity: 0;
+
+  .text {
+    text-align: left;
+    font-family: $font-family-message;
+    line-height: 2;
+    padding: 30px;
+    color: $navy;
+    font-size: 16px;
+  }
+
+  .name {
+    text-align: right;
+    font-weight: 700;
+    padding: 30px;
+  }
+
+  .team {
+    text-align: right;
+    font-size: 14px;
+    padding-bottom: 10px;
+    font-weight: 400;
+  }
+}
+
+
+.page {
+  width: 100%;
+  height: calc(100% - 87px);
+  padding-top: 87px;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 200%;
+  min-height: 200%;
+  position: relative;
+  margin: 60px;
+}
+
+.slack-icon {
+  width: 70px!important;
+  height: 70px!important;
+  display: block;
+  position: absolute;
+  box-shadow: 0 0 5px rgba(#000, 0.1);
+  transition: 0.3s all;
+  border-radius: 16px;
+
+  &:hover {
+    transform: scale(1.8)!important;
+    cursor: pointer;
+  }
+
+  &.active {
+    z-index: 1000;
+    transform: scale(2);
+  }
+}
+
+.naoki-image {
+  position: absolute;
+  height: auto!important;
+  z-index: -1;
+}
+
+.tooltips {
+  display: block;
+  position: absolute;
+  z-index: 9999;
+  width: auto;
+  height: auto;
+  padding: 0.3em 0.5em;
+  color: $white;
+  font-size: 1em;
+  background: $navy;
+  border-radius: 0.5em;
+  animation-name: tooltip;
+  animation-duration: 0.2s;
+  transform-origin: left top;
+}
+
+@keyframes tooltip {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.tooltips:after {
+  width: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0.5em;
+  top: -8px;
+  border-top:8px solid transparent;
+  border-left:8px solid $navy;
+}
