@@ -1,0 +1,119 @@
+$grid-spacing-base: 8px;
+
+.grid {
+  margin: $grid-spacing-base;
+  position: relative;
+}
+.item {
+  display: block;
+  margin: $grid-spacing-base;
+  position: absolute;
+}
+.item.muuri-item-dragging {
+  z-index: 3;
+}
+.item.muuri-item-releasing {
+  z-index: 2;
+}
+.item.muuri-item-hidden {
+  z-index: 0;
+}
+.item--content {
+  align-items: flex-start;
+  color: $blue-dark;
+  background-color: $gray-lightest;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+  padding: 22px;
+  min-height: 120px;
+  left: 0px;
+  top: 0px;
+  width: 280px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 20px 0px;
+}
+.item--content--message,
+.item--content--user {
+  width: 100%;
+}
+.item--content--user {
+  text-align: right;
+  font-size: 12px;
+}
+.item--content--user--division {
+  color: #989EB0
+}
+.item--content--message {
+  display: flex;
+  align-items: top;
+  font-size: 13px;
+  .icon {
+    margin-right: 18px;
+    width: 84px;
+    height: 84px;
+  }
+}
+
+$filter-height: 36px;
+$filter-width: 200px;
+
+.item--filter--container {
+  background-color: white;
+  width: $filter-width;
+  position: absolute;
+  right: $grid-spacing-base * 2;
+  display: flex;
+  height: $filter-height;
+  border-radius: 5px;
+}
+.grid-control {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+.grid-control-field {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-left: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #5455ff;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  z-index: 1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+.grid-control-icon {
+  left: 0;
+}
+.grid-control-icon, .grid-select-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  pointer-events: none;
+  color: #ff69ea;
+  width: 18px;
+  height: $filter-height;
+  padding: 1px 12px;
+}
+.grid-select-arrow {
+  right: 0;
+}
+.grid-control-icon svg, .grid-select-arrow svg {
+  flex-grow: 1;
+}

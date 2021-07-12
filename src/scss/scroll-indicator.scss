@@ -1,0 +1,47 @@
+// https://coco-factory.jp/ugokuweb/move01/9-1-1/
+
+.page--content--scroll {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.page--content--scroll span {
+  position: absolute;
+  left: -24px;
+  top: -24px;
+  color: #eee;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.page--content--scroll::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 30px;
+  background: #eee;
+  animation: pathmove 1.4s ease-in-out infinite;
+  opacity:0;
+}
+
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+}
