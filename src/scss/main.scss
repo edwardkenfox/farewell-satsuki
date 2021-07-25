@@ -133,7 +133,6 @@ $icon-size: 50px;
   background-color: white;
 
   header {
-    font-family: homemade-apple;
     font-size: 13px;
     color: white;
     align-items: center;
@@ -145,8 +144,8 @@ $icon-size: 50px;
 
   .loading--body {
     width: 150px;
-    font-family: initial;
     .loading--body--we {
+      font-family: homemade-apple;
       font-size: 18px;
       padding-top: 6px;
     }
