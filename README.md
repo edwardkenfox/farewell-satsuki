@@ -14,4 +14,4 @@
 - [ ] Loading完了するまでスクロール禁止する
 - [x] Backにリンク
 - [x] アップしてみる
-- [ ] fix title tag
+- [x] fix title tag
