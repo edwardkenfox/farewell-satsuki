@@ -145,8 +145,10 @@ $icon-size: 50px;
 
   .loading--body {
     width: 150px;
+    font-family: initial;
     .loading--body--we {
       font-size: 18px;
+      padding-top: 6px;
     }
     .loading--body--heart > img {
       height: 24px;
