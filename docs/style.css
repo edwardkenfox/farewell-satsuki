@@ -254,7 +254,6 @@ body {
     color: white;
     align-items: center;
     display: flex;
-    width: 100%;
     background: linear-gradient(239.78deg, #2F87CE 26.17%, #405CB9 66.5%);
     height: 70px; }
   .section.messages .loading--body {
