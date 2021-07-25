@@ -53,7 +53,8 @@
   .item--content--message .icon {
     margin-right: 18px;
     width: 84px;
-    height: 84px; }
+    height: 84px;
+    border-radius: 42px; }
 
 .item--filter--container {
   background-color: white;
@@ -78,7 +79,7 @@
   padding-left: 12px;
   font-size: 16px;
   font-weight: 700;
-  color: #5455ff;
+  color: #455db3;
   background: transparent;
   border: 0;
   border-radius: 0;
@@ -99,7 +100,7 @@
   top: 0;
   z-index: 2;
   pointer-events: none;
-  color: #ff69ea;
+  color: #da5565;
   width: 18px;
   height: 36px;
   padding: 1px 12px; }

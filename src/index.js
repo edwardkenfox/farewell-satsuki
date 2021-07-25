@@ -9,7 +9,30 @@ function wait(time) {
   return;
 }
 
+const disableArrowUp = (e) => {
+  if (e.keyCode === 38) {
+    console.log('ArrowUp disbabled!')
+    e.preventDefault();
+    e.stopPropagation();
+    return;
+  }
+}
+
+const disableArrowDown = (e) => {
+  if (e.keyCode === 40) {
+    console.log('ArrowDown disbabled!')
+    e.preventDefault();
+    e.stopPropagation();
+    return;
+  }
+}
+
 $(async () => {
+
+  // window.addEventListener('keydown', disableArrowUp);
+  // window.addEventListener('keydown', disableArrowDown);
+
+
   const template = document.getElementById('item-template').content;
   const fragment = document.createDocumentFragment();
 
@@ -81,4 +104,7 @@ $(async () => {
 
 
   $('.page--content--scroll').fadeIn(500);
+
+  // window.removeEventListener('keydown', disableArrowUp);
+  // window.removeEventListener('keydown', disableArrowDown);
 })
