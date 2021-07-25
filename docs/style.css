@@ -258,7 +258,12 @@ body {
     background: linear-gradient(239.78deg, #2F87CE 26.17%, #405CB9 66.5%);
     height: 70px; }
   .section.messages .loading--body {
-    width: 240px; }
+    width: 150px; }
+    .section.messages .loading--body .loading--body--we {
+      font-size: 18px; }
+    .section.messages .loading--body .loading--body--heart > img {
+      height: 24px;
+      width: 24px; }
     .section.messages .loading--body img {
       width: 48px;
       height: 48px; }

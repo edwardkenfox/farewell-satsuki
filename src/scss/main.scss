@@ -144,7 +144,14 @@ $icon-size: 50px;
   }
 
   .loading--body {
-    width: 240px;
+    width: 150px;
+    .loading--body--we {
+      font-size: 18px;
+    }
+    .loading--body--heart > img {
+      height: 24px;
+      width: 24px;
+    }
     img {
       width: 48px;
       height: 48px;
