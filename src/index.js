@@ -13,6 +13,10 @@ $(async () => {
   const template = document.getElementById('item-template').content;
   const fragment = document.createDocumentFragment();
 
+  setInterval(() => {
+    window.dispatchEvent(new Event('resize'))
+  }, 1000);
+
   await fetch('farewell-satsuki/data.json')
     .then((data) => data.json())
     .then((json) => {
@@ -56,7 +60,6 @@ $(async () => {
   })
 
   await wait(3000);
-  window.dispatchEvent(new Event('resize'))
 
   $('.page--content.hidden').fadeIn(1000);
 

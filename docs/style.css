@@ -136,6 +136,9 @@
   animation: pathmove 1.4s ease-in-out infinite;
   opacity: 0; }
 
+.page--content--scroll-back {
+  font-size: 1rem; }
+
 @keyframes pathmove {
   0% {
     height: 0;
@@ -223,24 +226,31 @@ body {
 
 .loading--body {
   text-align: center;
-  width: 40%;
+  width: 200px;
   display: flex;
   justify-content: space-evenly;
   align-items: center; }
+  .loading--body .loading--body--heart {
+    height: 24px; }
+    .loading--body .loading--body--heart img {
+      width: 24px;
+      height: 24px; }
 
 .icon {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px; }
+  width: 50px;
+  height: 50px;
+  border-radius: 25px; }
 
 .loading--indicator {
   opacity: 0;
-  font-family: initial; }
+  font-family: initial;
+  text-align: center; }
 
 .section.messages {
   background-color: white; }
   .section.messages header {
     font-family: homemade-apple;
+    font-size: 13px;
     color: white;
     align-items: center;
     display: flex;

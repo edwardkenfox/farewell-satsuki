@@ -100,20 +100,31 @@ body {
 
 .loading--body {
   text-align: center;
-  width: 40%;
+  width: 200px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  $heart-icon-size: 24px;
+  .loading--body--heart {
+    height: $heart-icon-size;
+    img {
+      width: $heart-icon-size;
+      height: $heart-icon-size;
+    }
+  }
 }
+
+$icon-size: 50px;
 .icon {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
+  width: $icon-size;
+  height: $icon-size;
+  border-radius: $icon-size / 2;
 }
 .loading--indicator {
   opacity: 0;
   // transition: 0.1s ease-in-out;
   font-family: initial;
+  text-align: center;
 }
 
 
@@ -123,6 +134,7 @@ body {
 
   header {
     font-family: homemade-apple;
+    font-size: 13px;
     color: white;
     align-items: center;
     display: flex;
