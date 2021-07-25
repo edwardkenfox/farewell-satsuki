@@ -13,7 +13,7 @@ $(async () => {
   const template = document.getElementById('item-template').content;
   const fragment = document.createDocumentFragment();
 
-  await fetch('/data.json')
+  await fetch('farewell-satsuki/data.json')
     .then((data) => data.json())
     .then((json) => {
       for (const record of json) {

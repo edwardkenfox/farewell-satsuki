@@ -21,4 +21,4 @@ csv.each.with_index do |row, i|
   })
 end
 
-File.write("./docs/data.json", JSON.generate(rows))
+File.write("./docs/farewell-satsuki/data.json", JSON.generate(rows))
