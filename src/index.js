@@ -38,16 +38,25 @@ $(async () => {
       document.querySelector('.grid').appendChild(fragment);
     })
 
-
   $('#pagepiling').pagepiling({
     navigation: false,
+    normalScrollElements: '.grid',
+    // normalScrollElementTouchThreshold: 2,
   });
+  $('.page--content--scroll-back').on('click', () => {
+    $.fn.pagepiling.moveTo(1);
+  })
+  $('.page--content--scroll').on('click', () => {
+    $.fn.pagepiling.moveTo(2);
+  })
+
   const grid = new Muuri('.grid');
   $('.grid-control-field.filter-field').on('change', (value) => {
     grid.filter(value.target.value);
   })
 
   await wait(3000);
+  window.dispatchEvent(new Event('resize'))
 
   $('.page--content.hidden').fadeIn(1000);
 
@@ -67,8 +76,6 @@ $(async () => {
 
   await wait(3000);
 
-  $('.page--content--scroll').on('click', () => {
-    $.fn.pagepiling.moveTo(2);
-  })
+
   $('.page--content--scroll').fadeIn(500);
 })
