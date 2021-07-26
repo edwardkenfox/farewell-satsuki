@@ -30,7 +30,18 @@
 }
 
 .page--content--scroll-back {
-  font-size: 1rem;
+  font-size: 12px;
+  margin-left: 16px;
+  font-weight: 500;
+  transition: opacity 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 @keyframes pathmove {

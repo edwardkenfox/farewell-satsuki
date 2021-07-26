@@ -1,4 +1,4 @@
-$grid-spacing-base: 8px;
+$grid-spacing-base: 12px;
 
 .grid {
   margin: $grid-spacing-base;
@@ -35,7 +35,9 @@ $grid-spacing-base: 8px;
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin: 20px 0px;
+  @media screen and (max-width: 767px) {
+    width: auto;
+  }
 }
 .item--content--message,
 .item--content--user {
@@ -43,20 +45,27 @@ $grid-spacing-base: 8px;
 }
 .item--content--user {
   text-align: right;
-  font-size: 12px;
+  font-size: 14px;
+  margin-top: 8px;
+  letter-spacing: 1px;
+  color: #585F76;
 }
-.item--content--user--division {
-  color: #989EB0
+
+.item--content--user--name {
+  font-weight: 500;
 }
 .item--content--message {
   display: flex;
   align-items: top;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+  line-height: 1.8;
   .icon {
     margin-right: 18px;
-    width: 84px;
-    height: 84px;
-    border-radius: 42px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
   }
 }
 
