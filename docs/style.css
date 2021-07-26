@@ -1,10 +1,10 @@
 .grid {
-  margin: 8px;
+  margin: 12px;
   position: relative; }
 
 .item {
   display: block;
-  margin: 8px;
+  margin: 12px;
   position: absolute; }
 
 .item.muuri-item-dragging {
@@ -32,8 +32,10 @@
   width: 280px;
   flex: none;
   order: 0;
-  flex-grow: 0;
-  margin: 20px 0px; }
+  flex-grow: 0; }
+  @media screen and (max-width: 767px) {
+    .item--content {
+      width: auto; } }
 
 .item--content--message,
 .item--content--user {
@@ -41,26 +43,32 @@
 
 .item--content--user {
   text-align: right;
-  font-size: 12px; }
+  font-size: 14px;
+  margin-top: 8px;
+  letter-spacing: 1px;
+  color: #585F76; }
 
-.item--content--user--division {
-  color: #989EB0; }
+.item--content--user--name {
+  font-weight: 500; }
 
 .item--content--message {
   display: flex;
   align-items: top;
-  font-size: 12px; }
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+  line-height: 1.8; }
   .item--content--message .icon {
     margin-right: 18px;
-    width: 84px;
-    height: 84px;
-    border-radius: 42px; }
+    width: 60px;
+    height: 60px;
+    border-radius: 30px; }
 
 .item--filter--container {
   background-color: white;
   width: 200px;
   position: absolute;
-  right: 16px;
+  right: 24px;
   display: flex;
   height: 36px;
   border-radius: 5px; }
@@ -138,7 +146,16 @@
   opacity: 0; }
 
 .page--content--scroll-back {
-  font-size: 1rem; }
+  font-size: 12px;
+  margin-left: 16px;
+  font-weight: 500;
+  transition: opacity 0.3s; }
+  .page--content--scroll-back:hover {
+    cursor: pointer;
+    opacity: 0.6; }
+  @media screen and (max-width: 767px) {
+    .page--content--scroll-back {
+      display: none; } }
 
 @keyframes pathmove {
   0% {
@@ -153,13 +170,11 @@
     top: 50px;
     opacity: 0; } }
 
-@font-face {
-  font-family: "homemade-apple";
-  src: url("/farewell-satsuki/fonts/HomemadeApple-Regular.ttf") format("truetype"); }
-
 body {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300; }
 
 .section.key-visual {
   display: flex;
@@ -180,7 +195,6 @@ body {
   top: 0;
   left: 0; }
   .wrapper .page .page--content {
-    font-family: homemade-apple;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,35 +216,64 @@ body {
       width: 50%;
       height: 50%;
       text-align: center; }
+      @media screen and (max-width: 767px) {
+        .wrapper .page.intro .page--content {
+          width: 100%;
+          height: 100%; } }
       .wrapper .page.intro .page--content .page--content--header {
         z-index: 101;
         font-size: 48px;
-        line-height: 1.7; }
+        line-height: 1.7;
+        font-family: 'Homemade Apple', cursive; }
         .wrapper .page.intro .page--content .page--content--header div:nth-child(1) {
           color: #EC4862; }
         .wrapper .page.intro .page--content .page--content--header div:nth-child(2) {
           color: #4e546b; }
         .wrapper .page.intro .page--content .page--content--header div:nth-child(3) {
           color: #206db5; }
+        @media screen and (max-width: 767px) {
+          .wrapper .page.intro .page--content .page--content--header {
+            font-size: 24px; } }
       .wrapper .page.intro .page--content .page--content--body {
         margin-top: 24px;
-        z-index: 101;
-        font-family: initial; }
+        z-index: 101; }
+        @media screen and (max-width: 767px) {
+          .wrapper .page.intro .page--content .page--content--body {
+            margin-top: 4px; } }
         .wrapper .page.intro .page--content .page--content--body div:nth-child(1) {
-          color: #333744; }
+          color: #333744;
+          font-size: 18px;
+          letter-spacing: 3px;
+          font-weight: 500; }
+          @media screen and (max-width: 767px) {
+            .wrapper .page.intro .page--content .page--content--body div:nth-child(1) {
+              font-size: 11px;
+              letter-spacing: 1px; } }
         .wrapper .page.intro .page--content .page--content--body div:nth-child(2) {
-          color: #585F76; }
+          color: #585F76;
+          font-size: 14px;
+          letter-spacing: 2px;
+          margin-top: 8px; }
+          @media screen and (max-width: 768px) {
+            .wrapper .page.intro .page--content .page--content--body div:nth-child(2) {
+              display: none; } }
       .wrapper .page.intro .page--content img {
         position: absolute;
         max-width: 640px;
         z-index: 100; }
+        @media screen and (max-width: 767px) {
+          .wrapper .page.intro .page--content img {
+            max-width: 95%; } }
 
 .loading--body {
   text-align: center;
   width: 200px;
   display: flex;
   justify-content: space-evenly;
-  align-items: center; }
+  align-items: center;
+  font-family: 'Homemade Apple', cursive; }
+  .loading--body .loading--body--we {
+    font-size: 18px; }
   .loading--body .loading--body--heart {
     height: 24px; }
     .loading--body .loading--body--heart img {
@@ -244,22 +287,32 @@ body {
 
 .loading--indicator {
   opacity: 0;
-  font-family: initial;
   text-align: center; }
 
 .section.messages {
   background-color: white; }
+  .section.messages .page {
+    padding-top: 70px;
+    box-sizing: border-box; }
   .section.messages header {
     font-size: 13px;
     color: white;
     align-items: center;
     display: flex;
     background: linear-gradient(239.78deg, #2F87CE 26.17%, #405CB9 66.5%);
-    height: 70px; }
+    height: 70px;
+    letter-spacing: 2px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999; }
+  @media screen and (max-width: 767px) {
+    .section.messages .tagline {
+      display: none; } }
   .section.messages .loading--body {
     width: 150px; }
     .section.messages .loading--body .loading--body--we {
-      font-family: homemade-apple;
+      font-family: 'Homemade Apple', cursive;
       font-size: 18px;
       padding-top: 6px; }
     .section.messages .loading--body .loading--body--heart > img {
