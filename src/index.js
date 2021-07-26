@@ -84,9 +84,9 @@ $(async () => {
     grid.filter(value.target.value);
   })
 
-  await wait(1);
+  //await wait(1);
 
-  $('.page--content.hidden').fadeIn(1000);
+  //$('.page--content.hidden').fadeIn(1000);
 
   await wait(1);
 
@@ -100,6 +100,7 @@ $(async () => {
 
   $('.page.loading').fadeOut(1000);
   $(".page.intro").show();
+  $(".messages header").css('display', 'flex');
   $('.page.intro').css('display', 'flex');
 
   await wait(1000);

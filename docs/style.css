@@ -200,8 +200,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column; }
-    .wrapper .page .page--content.hidden {
-      display: none; }
   .wrapper .page.loading {
     background: linear-gradient(239.78deg, #2F87CE 26.17%, #405CB9 66.5%);
     z-index: 101; }
@@ -316,14 +314,14 @@ body {
     font-size: 13px;
     color: white;
     align-items: center;
-    display: flex;
     background: linear-gradient(239.78deg, #2F87CE 26.17%, #405CB9 66.5%);
     height: 70px;
     letter-spacing: 2px;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 999; }
+    z-index: 999;
+    display: none; }
   @media screen and (max-width: 767px) {
     .section.messages .tagline {
       display: none; } }

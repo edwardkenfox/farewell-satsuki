@@ -31,7 +31,7 @@ body {
       align-items: center;
       flex-direction: column;
       &.hidden {
-        display: none;
+        //display: none;
       }
     }
     position: absolute;
@@ -186,7 +186,7 @@ $icon-size: 50px;
     font-size: 13px;
     color: white;
     align-items: center;
-    display: flex;
+    //display: flex;
     background: linear-gradient(239.78deg, #2F87CE 26.17%, #405CB9 66.5%);
     height: 70px;
     letter-spacing: 2px;
@@ -194,6 +194,7 @@ $icon-size: 50px;
     top: 0;
     width: 100%;
     z-index: 999;
+    display: none;
   }
 
   .tagline {
