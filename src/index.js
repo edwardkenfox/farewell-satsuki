@@ -40,6 +40,8 @@ $(async () => {
     window.dispatchEvent(new Event('resize'))
   }, 1000);
 
+  $(".page--content.hidden").fadeIn(1000);
+
   await fetch('farewell-satsuki/data.json')
     .then((data) => data.json())
     .then((json) => {
