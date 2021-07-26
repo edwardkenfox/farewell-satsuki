@@ -45,17 +45,36 @@ body {
 
     &.intro {
       display: none;
-      background: url('/farewell-satsuki/img/background.jpg'), linear-gradient(239.78deg, #2F87CE 26.17%, #405CB9 66.5%);
+      background: linear-gradient(239.78deg, #2F87CE 26.17%, #405CB9 66.5%);
       z-index: 100;
       justify-content: center;
       align-items: center;
       background-size: contain;
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background: url('/farewell-satsuki/img/background.jpg');
+        background-size: 1000px auto;
+        opacity: 0.5;
+        z-index: 2;
+        @media screen and (max-width: 767px) {
+          background-size: 700px auto;
+        }
+      }
 
       .page--content {
         position: relative;
         width: 50%;
         height: 50%;
         text-align: center;
+        z-index: 3;
         @media screen and (max-width: 767px) {
           width: 100%;
           height: 100%;
