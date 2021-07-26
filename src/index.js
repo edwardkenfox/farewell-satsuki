@@ -99,7 +99,7 @@ $(async () => {
   await wait(3000);
 
   $('.page.loading').fadeOut(1000);
-  $(".page.intro").show();
+  //$(".page.intro").show();
   $(".messages header").css('display', 'flex');
   $('.page.intro').css('display', 'flex');
 
