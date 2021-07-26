@@ -82,25 +82,25 @@ $(async () => {
     grid.filter(value.target.value);
   })
 
-  await wait(3000);
+  await wait(1);
 
   $('.page--content.hidden').fadeIn(1000);
 
-  await wait(3000);
+  await wait(1);
 
   $('.loading--indicator').css('opacity', '1');
 
+  //await wait(3000);
+
+  //$('.loading--indicator').css('opacity', '0');
+
   await wait(3000);
 
-  $('.loading--indicator').css('opacity', '0');
-
-  await wait(3000);
-
-  $('.page.loading').fadeOut(3000);
-  $('.page.intro').fadeIn(1000);
+  $('.page.loading').fadeOut(1000);
+  $(".page.intro").show();
   $('.page.intro').css('display', 'flex');
 
-  await wait(3000);
+  await wait(1000);
 
 
   $('.page--content--scroll').fadeIn(500);
