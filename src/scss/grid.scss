@@ -70,7 +70,7 @@ $grid-spacing-base: 12px;
 }
 
 $filter-height: 36px;
-$filter-width: 200px;
+$filter-width: 180px;
 
 .item--filter--container {
   background-color: white;
@@ -79,7 +79,7 @@ $filter-width: 200px;
   right: $grid-spacing-base * 2;
   display: flex;
   height: $filter-height;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 .grid-control {
   display: flex;
@@ -93,8 +93,9 @@ $filter-width: 200px;
   width: 100%;
   height: 100%;
   padding-left: 12px;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 500;
   color: rgb(69, 93, 179);
   background: transparent;
   border: 0;
@@ -117,7 +118,7 @@ $filter-width: 200px;
   z-index: 2;
   pointer-events: none;
   color: rgb(218, 85, 101);
-  width: 18px;
+  width: 10px;
   height: $filter-height;
   padding: 1px 12px;
 }

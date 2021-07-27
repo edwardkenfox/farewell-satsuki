@@ -205,6 +205,10 @@ $icon-size: 50px;
 
   .loading--body {
     width: 150px;
+    margin: 0 10px 0 16px;
+    @media screen and (max-width: 767px) {
+      width: 130px;
+    }
     .loading--body--we {
       font-family: 'Homemade Apple', cursive;
       font-size: 18px;
@@ -217,6 +221,10 @@ $icon-size: 50px;
     img {
       width: 48px;
       height: 48px;
+      @media screen and (max-width: 767px) {
+        height: 40px;
+        width: 40px;
+      }
     }
   }
 }

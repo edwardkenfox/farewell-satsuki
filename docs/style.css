@@ -66,12 +66,12 @@
 
 .item--filter--container {
   background-color: white;
-  width: 200px;
+  width: 180px;
   position: absolute;
   right: 24px;
   display: flex;
   height: 36px;
-  border-radius: 5px; }
+  border-radius: 8px; }
 
 .grid-control {
   display: flex;
@@ -85,8 +85,9 @@
   width: 100%;
   height: 100%;
   padding-left: 12px;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 500;
   color: #455db3;
   background: transparent;
   border: 0;
@@ -109,7 +110,7 @@
   z-index: 2;
   pointer-events: none;
   color: #da5565;
-  width: 18px;
+  width: 10px;
   height: 36px;
   padding: 1px 12px; }
 
@@ -326,7 +327,11 @@ body {
     .section.messages .tagline {
       display: none; } }
   .section.messages .loading--body {
-    width: 150px; }
+    width: 150px;
+    margin: 0 10px 0 16px; }
+    @media screen and (max-width: 767px) {
+      .section.messages .loading--body {
+        width: 130px; } }
     .section.messages .loading--body .loading--body--we {
       font-family: 'Homemade Apple', cursive;
       font-size: 18px;
@@ -337,3 +342,7 @@ body {
     .section.messages .loading--body img {
       width: 48px;
       height: 48px; }
+      @media screen and (max-width: 767px) {
+        .section.messages .loading--body img {
+          height: 40px;
+          width: 40px; } }
